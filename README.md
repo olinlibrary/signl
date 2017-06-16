@@ -1,5 +1,7 @@
 # signl
 
+Generate files for vinyl cutting signs that conform to the library style.
+
 ## Resources
 
 - rune.js: https://runemadsen.github.io/rune.js/
