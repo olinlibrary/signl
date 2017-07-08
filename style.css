@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'DINOT';
+  src: url('DINOT-CondBlackIta.otf')
+}
+
 body {
-  background: #888;
+  background: #A7A9AC;
 }
 body svg {
   padding: 0;
@@ -10,5 +15,6 @@ body svg {
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 10px 20px
+  box-shadow: 0 10px 20px;
+  background-color: white;
 }
