@@ -1,6 +1,8 @@
 # signl
 
-Generate files for vinyl cutting signs that conform to the library style.
+### _/sīnl/_
+
+Generate files for vinyl-cut signs that conform to the Olin Library style.
 
 ## Resources
 
