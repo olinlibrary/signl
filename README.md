@@ -1,4 +1,4 @@
-# signl
+# signyl
 
 ### _/sīnl/_
 
