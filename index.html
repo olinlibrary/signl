@@ -4,12 +4,32 @@
     <meta charset="utf-8">
     <title>signyl</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="rune.js"></script>
-    <script type="text/javascript", src="rune.font.js">
-
-    </script>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/paperscript" src="sketch.js" canvas="canvas" async></script>
   </head>
   <body>
-    <script type="text/javascript" src="sketch.js"></script>
+    <!-- style something with font https://groups.google.com/forum/#!topic/paperjs/mdjv-LrUS1Y -->
+    <div style="font-family: 'DINOT'">&nbsp;</div>
+      <canvas id="canvas" resize></canvas>
+      <div class="controls">
+        <a id="download" href="" download>DOWNLOAD</a>
+      </div>
   </body>
+  <script type="text/javascript">
+    // download svg https://github.com/paperjs/paper.js/issues/673#issuecomment-91945580
+    $(document).ready(function(){
+      function getBlobURL(content, type) {
+          return URL.createObjectURL(new Blob([content], {
+              type: type
+          }));
+      }
+
+      $('#download').click(function() {
+          var svg = paper.project.exportSVG({ asString: true });
+          this.href = getBlobURL(svg, 'image/svg+xml');
+          this.download = 'signyl.svg';
+      });
+    });
+  </script>
 </html>
